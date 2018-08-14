@@ -1,0 +1,13 @@
+<h1>Editing a song</h1>
+
+<%= render "shared/error_messages", model: @song %>
+
+<%= form_for @song do |form| %>
+  <%= form.label :Name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :Duration %>
+  <%= form.number_field :duration %>
+  <br>
+  <%= form.submit "Edit" %>
+<% end %>
